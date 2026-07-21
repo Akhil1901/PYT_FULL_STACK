@@ -155,7 +155,19 @@ while(num>0):
     reverse=reverse*10+digit
     num=num//10
 print(reverse)'''
-num=100
-d=1
-while(d<=num):
-    if(num)
+num = 100
+i = 1
+
+while i <= num:
+    j = 1
+    count = 0
+
+    while j <= i:
+        if i % j == 0:
+            count += 1
+        j += 1
+
+    if count == 2:
+        print(i)
+
+    i += 1
