@@ -73,4 +73,48 @@ while(i<=100):
         print(i)
     i=i+1
 """
+"""n = int(input("Enter value: "))
 
+a = 0
+b = 1
+count1 = 0
+
+while T:
+
+    c = a + b
+
+    # Prime check
+    count = 0
+    i = 1
+
+    while i <= c:
+        if c % i == 0:
+            count += 1
+        i += 1
+
+    if count == 2:
+        count1 += 1
+
+        if count1 == n:
+            print(c)
+            break
+
+    a = b
+    b = c
+"""
+n=int(input("enter an number : "))
+i=1
+count2=0
+while(True):
+    j=1
+    count=0
+    while(j<=i):
+        if(i%j==0):
+            count=count+1
+        j=j+1
+    if(count==2):
+        count2=count2+1
+        if(count2==n):
+            print(i)
+            break
+    i=i+1

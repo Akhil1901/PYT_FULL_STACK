@@ -55,5 +55,91 @@ while(num>0):
     num=num//10
 print(smallest)
 """
+"""num=int(input("enter an number : "))
+count=0
+while(num>0):
+    digit=num%10
+    if(digit%3==0):
+        count=count+1
+    num=num//10
+print(count)"""
+#Find the First Even Digit (from the Left)
+"""num=int(input("enter an number : "))
+temp=num
+evn_cnt=0
+while(num>0):
+    digit=num%10
+    if(digit%2==0):
+        evn_cnt=evn_cnt+1
+    num=num//10
+while(temp>0):
+    digit=temp%10
+    if(digit%2==0):
+        evn_cnt=evn_cnt-1
+        if(evn_cnt==0):
+            print(digit)
+            break
+    temp=temp//10"""
+"""num=int(input("enter an number"))
+count=0
+past_digit=0
+present_digit=0
+while(num>0):
+    digit=num%10
+    present_digit=digit
+    if(present_digit==past_digit):
+        count=count+1
+    past_digit=digit
+    num=num//10
+print(count)"""
+
+num=int(input("enter an number: "))
+count2=0
+product=1
+while(num>0):
+    digit=num%10
+    i=1
+    count=0
+    while(i<=digit):
+        if(digit%i==0):
+            count=count+1
+        i=i+1
+    if(count==2):
+        product=product*digit
+    num=num//10
+print(product)
 num=int(input("enter an number : "))
- 
+largest=0
+second_largest=0
+
+digit=num%10
+    largest=digi
+num=num//10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
