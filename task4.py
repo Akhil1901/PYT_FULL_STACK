@@ -102,7 +102,7 @@ while T:
     a = b
     b = c
 """
-n=int(input("enter an number : "))
+"""n=int(input("enter an number : "))
 i=1
 count2=0
 while(True):
@@ -117,4 +117,4 @@ while(True):
         if(count2==n):
             print(i)
             break
-    i=i+1
+    i=i+1"""

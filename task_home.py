@@ -1,0 +1,26 @@
+num=int(input("enter an number : "))
+temp=num
+bkp=num
+i=1
+count=0
+while(temp>0):
+    temp=temp//10
+    count=count+1
+print(count)
+largest=0 
+new_num=0
+while(i<=count):
+    bkp=num
+    print(bkp)
+    while(bkp>0):
+        digit=bkp%10
+        if(digit>largest):
+            largest=digit
+        bkp=bkp//10
+    print(largest)
+    if(i<=count):
+        op3=num
+        while(op3>0):
+            digit=op3%10
+            if(digit==largest):            
+    i=i+1

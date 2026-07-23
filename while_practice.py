@@ -108,14 +108,6 @@ while(num>0):
         product=product*digit
     num=num//10
 print(product)
-num=int(input("enter an number : "))
-largest=0
-second_largest=0
-
-digit=num%10
-    largest=digi
-num=num//10
-
 
 
 
