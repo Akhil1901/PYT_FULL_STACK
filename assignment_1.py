@@ -35,7 +35,7 @@ while(i<=200):
         temp=temp//10
     if(sum==product):
         print(number)
-    i=i+1"""
+    i=i+1 """
 
 """write a python program to print all palindrome numbers from 1 to 200 using while loop """
 
@@ -50,8 +50,8 @@ while(i<=num):
         number=number//10
     if(reverse==i):
         print(i)
-    i=i+1
-"""
+    i=i+1"""
+
 """ write a python program to print the first and last digit of a given number using a while loop """
 
 """num=int(input("enter an number: "))
@@ -62,7 +62,7 @@ while(temp>0):
     count=count+1
 div=10**(count-1)
 first=num//div
-last=num%10
+last=num%10 
 print("first:",first)
 print("last",last)
 """
