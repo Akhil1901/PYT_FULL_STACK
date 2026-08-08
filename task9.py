@@ -86,7 +86,7 @@ Output:
 ****
 *****"""
 
-rows=int(input("enter number of rows: "))
+"""rows=int(input("enter number of rows: "))
 for row_cnt in range(1,rows+1):
     print("*"*row_cnt,end="")
-    print()
+    print()"""
