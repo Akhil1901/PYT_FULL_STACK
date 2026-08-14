@@ -6,17 +6,19 @@ admin_password=['owner@123','cashier@123']
 user=['user1','user2','user3','user5','user4']
 user_password=['@123','@143','145','@146']
 #theatre movie details
-Movies=['Og2','kalki2','varanasi','dragon']
-show_times=['9:30 am to 11:30 am','2:30 pm to 5:00 pm','6:30 pm to 9:00 pm','9:30 pm to 12:30 am']
-seats=['A1','A2','A3','A4','A5','A6','A7','A8','A9','A10'
-       'B1','B2','B3','B4','B5','B6','B7','B8','B9','B10',
-        'C1','C2','C3','C4','C5','C6','C7','C8','C9','C10']
+movies=['Og2','kalki2','varanasi','dragon']
+shows=[]
+seats=[]
 bookings=[]
 cart_data=[]
+booked_seats=[]
 #choosing role 
 while(True): 
-    role=input("enter your role USER OR ADMIN or new user:")
-    if(role=="user"):
+    print("1.user")
+    print("2.Admin")
+    print("3.new user")
+    role=input("enter your role 1 or 2 or 3:")
+    if(role=="1"):
         count=5
         #user Login 
         while(count>3):
@@ -36,27 +38,36 @@ while(True):
                         print("your attempts overed try  after 15s  again")
                         exit()
                     else:
-                        print("password sucessfully")
                         count=0
-                        print("*******Welcome Dear customer **********")
-                        print("*****************choose your interested movie***********************")
-                        #displaying the movies 
-                        for select_movies in Movies:
-                            print(select_movies)
-                        select_movie=input("enter your interested movie ")
-                        #displaying the show times
-                        print("Displaying the show times")
-                        for show_times in show_times:
-                            print(show_times)
-                        #selecting the show time 
-                        show_time=input("enter your show time: ")
-                        print("displaying the seat layout")
-                        for i in seats:
-                            print(i, end=" ")
-                        print()
-                        seat_selection_list=[]
-                        #select yo
-    elif(role=='admin'):
+                        print("login sucessfully")
+                        while(True):
+                            print("displaying the User menu section")
+                            print("1.view movies")
+                            print("2.view shows")
+                            print("3.select seats")
+                            print("4.book ticket")
+                            print("5.view booking")
+                            print("6.exit")
+                            user_ch=int(input("enter your choice (1/2/3/4/5/6): "))
+                            if(user_ch==1):
+                                for i in movies:
+                                    
+                                    print(i)
+                            elif(user_ch==2):
+                                print("view shows")
+                            elif(user_ch==3):
+                                print("select seats")
+                            elif(user_ch==4):
+                                print("book ticket")
+                            elif(user_ch==5):
+                                print("view booking")
+                            elif(user_ch==6):
+                                print("exiting")
+                                break
+                            else:
+                                print("invalid")
+                                
+    elif(role=='2'):
         count=5
         while(count>3):
             admin_id=input("enter your admin id: ")
@@ -78,40 +89,55 @@ while(True):
                             print("login sucessfully")
                             print("*******Welcome Admin **********")
                             print("**********Displaying admin menu section**********")
-                            print("add movies")
-                            print("add shows")
-                            print("manage seats")
-                            print("delete shows or movies")
-                            print("view bookings")
-                            print("exit")
-                            admin_choice=input("enter your option: ")
-                            if(admin_choice=='addmovies'):
-                                movie_name=input("enter movie name to be added: ")
-                                Movies.append(movie_name)
-                                print("**************Displaying the all movies**********")
-                                for i in Movies:
-                                    print(i)
-                            elif(admin_choice=='addshows'):
-                                show_time = input("enter show time")
-                                if(len(show_time)==4):
-                                    print("shows are full")
+                            print("1.add movies")
+                            print("2.add shows")
+                            print("3.manage seats")
+                            print("4.delete shows or movies")
+                            print("5.view bookings")
+                            print("6.exit")
+                            admin_choice=input("enter your option(1/2/3/4/5/6): ")
+                            if(admin_choice=='1'):
+                                add_movies=input("enter the movie name to be added: ")
+                                if(add_movies in movies):
+                                    print("movie already exist")
                                 else:
-                                    show_time.append(show_time)
-                                    #updated the show_times
-                                    for i in show_times:
+                                    print("available movies")
+                                    movies.append(add_movies)
+                                    shows.append([])
+                                    seats.append([])
+                                    for movie in movies:
+                                        idx = movies.index(movie)
+                                        print(idx,".",movie)
+                                    print(add_movies,"Movie added Sucessfully.")
+                            elif(admin_choice=='2'):
+                                #displaying the available movies
+                                for movie in movies:
+                                    idx = movies.index(movie)
+                                    print(idx,".",movie)
+                                movie_name=int(input("enter the movie name to add shows:"))
+                                if(movie_name>=0 and movie_name<len(movies)):
+                                    add_shows=input("enter the show timings to be added: ")
+                                    shows[movie_name].append(add_shows)
+                                    for i in shows[movie_name]:
                                         print(i)
-                            elif(admin_choice=='manageseats'):
+                                else:
+                                    print("Invalid movie choice")
+                            elif(admin_choice=='3'):
                                 print("manage seats")
-                            elif(admin_choice=='delete shows or movies'):
+                            elif(admin_choice=='4'):
                                 print("delete shows or movies")
-                            elif(admin_choice=='view bookings'):
+                            elif(admin_choice=='5'):
                                 print("view bookings")
-                            elif(admin_choice=='exit'):
+                            elif(admin_choice=='6'):
                                 print("exit")
                                 break
-    else:
+                            else:
+                                print("invalid")
+    elif(role=="3"):
         name=input("create your user id : ")
         password=input("create your password: ")
         user.append(name)
         user_password.append(password)
         print("registration sucessfully")
+    else:
+        print("invalid")
