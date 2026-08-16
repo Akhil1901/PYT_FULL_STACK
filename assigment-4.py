@@ -1,0 +1,17 @@
+"""num=(3,5,7,2,4,6,8,1,9)
+output=[]
+previous_difference=0
+i=0
+while(i<len(num)-1):
+    temp=num[i]
+    temp1=num[i+1]
+    difference=temp1-temp
+    if(difference>previous_difference):
+        output.append(temp)
+        output.append(temp1)
+    previous_difference=difference
+    i=i+1
+print(output)
+"""
+nums=[-2,1,-3,4,-1,2,1,-5,4]
+start

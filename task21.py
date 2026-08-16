@@ -47,7 +47,7 @@ for i in range(0,len(temp_list)-1):
         print("not consecutive")
         break
 else:
-    print("consecutive")
+         print("consecutive")
 
 """
 ### 4. Course Eligibility
