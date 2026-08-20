@@ -18,8 +18,8 @@ while(i<len(nums)):
                 if(org>previous_element and org<next_element):
                     if org not in output:
                          output.append(org)
-    i=i+1
-print(output)"""
+    i=i+1)
+print(output"""
 
 """t1=(10,20,30,20,40,50,30)
 t2=(30,40,60,20,70)
@@ -147,4 +147,13 @@ Output:
 3
 3
 2"""
-
+nums=(3,5,7,2,4,6,8,1,9)
+output=[]
+i=0
+while(i<len(nums)-2):
+    start=nums[i]
+    last=nums[i+1]
+    if(last>start):
+        output.append(start )
+    i=i+1
+print(output)
